@@ -29,25 +29,24 @@ export const sendVerificationEmail = async (user, res) => {
         from: AUTH_EMAIL,
         to: email,
         subject: "Email Verification",
-        html: `<div
-        style='font-family: Arial, sans-serif; font-size: 20px; color: #333; background-color:#fff'>
-        <h1 style="color : rgb(8,56,188)">Please veify your email address</h1>
-        <hr>
-        <h4>Hi ${lastName},<h4>
-        <p>
-            Please verify your email address so we can know that it's really you.
-            <br>
-        <p>This link <b>expires in 1 hour</b></p>
-        <br>
-        <a href=${link}
-        style="color: #fff; padding: 14px; text-decoration: none; background-color: #000;">
-         Verify Email Address </a>
+        html: `<div style="font-family: Arial;background-color: #ECECEC; max-width: 600px; margin: 0 auto; padding: 20px; border-radius: 5px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);">
+        <h1 style="font-family: Arial;color: rgb(8, 56, 188); font-size: 28px; margin-bottom: 10px;">Welcome to Our Platform</h1>
+        <hr style="font-family: Arial;border: 1px solid #ddd; margin-top: 20px;">
+        <h4 style="font-family: Arial;font-size: 20px; margin-top: 0;">Hi ${lastName},</h4>
+        <p style="font-family: Arial;font-size: 16px; line-height: 1.5; margin-bottom: 15px;">
+            Thank you for joining Memories, the platform that helps you relive and share your cherished memories with friends and family. To ensure the security of your account and the integrity of our community, we need to verify your email address.
         </p>
-        <div style="margin-top: 20px;">
-        <h5>Best Regards</h5>
-        <h5>Strings </h5>
+        <p style="font-family: Arial;font-size: 16px;"><strong>This verification link expires in 1 hour :</strong></p>
+        <p style="font-family: Arial;font-size: 16px;">
+            <a href="${link}" style="font-family: Arial;display: inline-block; background-color: #007bff; color: #fff; padding: 12px 24px; text-decoration: none; border-radius: 5px; transition: background-color 0.2s ease;">Verify Your Email Address</a>
+        </p>
+        <p style="font-family: Arial;font-size: 16px;">If you did not create an account on Memories, please disregard this email. <span style="color:  rgb(8, 56, 188)">Your account will not be activated until you verify your email.</span></p>
+        <p style="font-family: Arial;font-size: 16px; margin-bottom: 65px;">If you have any questions or need assistance, please don't hesitate to contact our support team at <span style="color:  rgb(8, 56, 188)">tibadiyayash@gmail.com</span></p>
+        <div style="font-family: Arial;margin-top: 20px;">
+            <h5 style="font-family: Arial;font-size: 16px; margin: 5px 0;">Best Regards,</h5>
+            <h5 style="font-family: Arial;font-size: 16px;">The Memories Team</h5>
         </div>
-        </div>`,
+    </div>`,
     }
 
     try {
@@ -94,13 +93,23 @@ export const resetPasswordLink = async (user, res) => {
         from: AUTH_EMAIL,
         to: email,
         subject: "Password Reset",
-        html:`<p style='font-family: Arial, sans-serif; font-size: 20px; color: #333; background-color:#fff'>
-            Password reset link. Please click the link below to reset password.
-            <br>
-            <p style="font-size: 18px;"><b>this link expires in 10 minutes</b></p>
-            <br>
-            <a href=${link} sytle="color: #fff; padding: 10px; text-decoration: none; background-color:"#000"> ${link} </a>
-        </p>`,
+        html:`<div style="font-family: Arial; background-color: #ECECEC; max-width: 600px; margin: 0 auto; padding: 20px; border-radius: 5px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);">
+        <h1 style="font-family: Arial; color: rgb(8, 56, 188); font-size: 28px; margin-bottom: 10px;">Welcome to Our Platform</h1>
+        <hr style="font-family: Arial; border: 1px solid #ddd; margin-top: 20px;">
+        <h4 style="font-family: Arial; font-size: 20px; margin-top: 0;">Hi.</h4>
+        <p style="font-family: Arial; font-size: 16px; line-height: 1.5; margin-bottom: 15px;">
+            Thank you for joining Memories, the platform that helps you relive and share your cherished memories with friends and family. Please click the link below to reset your Password.
+        </p>
+        <p style="font-family: Arial; font-size: 16px;"><strong>This link expires in 10 minutes :</strong></p>
+        <p style="font-family: Arial; font-size: 16px;">
+            <a href=${link} style="font-family: Arial; display: inline-block; background-color: #007bff; color: #fff; padding: 12px 24px; text-decoration: none; border-radius: 5px; transition: background-color 0.2s ease;">Reset Your Password</a>
+        </p>
+        <p style="font-family: Arial; font-size: 16px; margin-bottom: 65px;">If you have any questions or need assistance, please don't hesitate to contact our support team at <span style="color: rgb(8, 56, 188)">tibadiyayash@gmail.com</span></p>
+        <div style="font-family: Arial; margin-top: 15px;">
+            <h5 style="font-family: Arial; font-size: 16px; margin: 5px 0;">Best Regards,</h5>
+            <h5 style="font-family: Arial; font-size: 16px;">The Memories Team</h5>
+        </div>
+    </div>`,
     };
 
     try{
